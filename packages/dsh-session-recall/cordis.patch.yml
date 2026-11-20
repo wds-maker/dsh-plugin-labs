@@ -1,0 +1,8 @@
+# dsh-session-recall bundle patch.
+- insert:
+    - id: session-recall
+      name: dsh-session-recall
+      config:
+        maxSessions: 3
+        budgetChars: 1600
+        timeoutMs: 8000

@@ -1,0 +1,12 @@
+# dsh-comfyui-autostart bundle patch.
+- insert:
+    - id: comfyui-autostart
+      name: dsh-comfyui-autostart
+      config:
+        python: D:/ComfyUI/.venv/Scripts/python.exe
+        script: D:/ComfyUI/main.py
+        cwd: D:/ComfyUI
+        host: 127.0.0.1
+        port: 8188
+        logFile: D:/ComfyUI/comfyui-autostart.log
+        stateFile: D:/ComfyUI/comfyui-autostart.state.json

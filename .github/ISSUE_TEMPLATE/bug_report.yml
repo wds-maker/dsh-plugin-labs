@@ -1,0 +1,52 @@
+name: Bug report
+description: 插件行为不对、报错、装上没反应
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        谢谢反馈。贴代码和输出比自己描述有用十倍。**不要把 token、会话原文、私人路径贴上来**，脱敏后再贴。
+  - type: dropdown
+    id: package
+    attributes:
+      label: 哪个插件
+      options:
+        - dsh-comfyui-autostart
+        - dsh-session-recall
+        - dsh-reasoning-router
+        - 仓库/文档本身
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 发生了什么
+      description: 预期是什么，实际是什么
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 在 profile 里加 ...
+        2. 重启 DSH
+        3. 看到 ...
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: 相关输出
+      description: 报错原文、`stateFile` 内容、或 `route_text` 的完整输出（signals 很重要）
+      render: shell
+    validations:
+      required: false
+  - type: input
+    id: env
+    attributes:
+      label: 环境
+      placeholder: Windows 11 / Node 24.22 / DSH 版本 / ComfyUI 版本（如相关）
+    validations:
+      required: true

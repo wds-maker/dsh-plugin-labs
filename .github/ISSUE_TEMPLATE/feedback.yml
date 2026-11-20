@@ -1,0 +1,35 @@
+name: Rule / behavior feedback
+description: 判错了、规则不合理、想要别的边界
+title: "[feedback] "
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        这个仓库主要是来收意见的。**规则判错**和**边界讨论**都是高价值反馈，比"求加功能"有用。
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 属于哪类
+      options:
+        - 规则判错（chat/task 判错、难度打分不对）
+        - 设计取舍不同意（比如"为什么不接模型"）
+        - 边界/失败处理（超时、并发、异常吞掉是否合适）
+        - 想要新的配置项或 hook
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: case
+    attributes:
+      label: 具体例子
+      description: 一句话输入 + 期望结论 + 实际结论。有 `route_text` 输出的请直接贴。
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: 为什么这样更好
+      description: 说清使用场景，比"我觉得应该这样"更容易被采纳
+    validations:
+      required: true

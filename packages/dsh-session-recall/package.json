@@ -1,0 +1,46 @@
+{
+  "name": "dsh-session-recall",
+  "version": "0.1.2",
+  "private": true,
+  "description": "On every new session in a workspace, summarize the previous sessions there and inject a compressed recap so work continues instead of restarting from zero.",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "session",
+    "memory",
+    "recap",
+    "cordis"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wds-maker/dsh-plugin-labs.git",
+    "directory": "packages/dsh-session-recall"
+  },
+  "bugs": {
+    "url": "https://github.com/wds-maker/dsh-plugin-labs/issues"
+  },
+  "homepage": "https://github.com/wds-maker/dsh-plugin-labs/tree/main/packages/dsh-session-recall#readme",
+  "engines": {
+    "node": ">=22"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

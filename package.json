@@ -1,0 +1,32 @@
+{
+  "name": "dsh-plugin-labs",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Experimental DeepSeek Harness plugins, published for community review.",
+  "license": "MIT",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "npm run test --workspaces --if-present",
+    "check": "node scripts/check-syntax.mjs"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "plugins",
+    "cordis"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wds-maker/dsh-plugin-labs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wds-maker/dsh-plugin-labs/issues"
+  },
+  "homepage": "https://github.com/wds-maker/dsh-plugin-labs#readme",
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}

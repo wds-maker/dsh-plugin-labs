@@ -1,0 +1,4 @@
+# dsh-reasoning-router bundle patch.
+- insert:
+    - id: reasoning-router
+      name: dsh-reasoning-router
